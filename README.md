@@ -41,19 +41,20 @@ git clone https://github.com/yourusername/point-tracker.git
 cd point-tracker-app
 
 ### Install Dependencies
+For the FrontEnd:
+npm install
 For the BackEnd:
 cd point-tracker-backend
+npm install
 
 ### Configuration
 Update the database connection string in the backend configuration file to match your PostgreSQL setup.
 
 ### Running the Application
 Start the backend server:
-bash
 cd point-tracker-backend
-npm start
+node index.js
 Start the frontend development server:
-bash
 cd point-tracker-frontend
 npm run serve
 The application will be running at http://localhost:3000/.
