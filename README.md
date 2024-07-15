@@ -1,24 +1,59 @@
-# points-tracker-front-end
+# Point Tracker
 
-## Project setup
-```
-npm install
-```
+## Overview
+Point Tracker is a simple web application that allows users to manage a set of named points on a 2D plane. Users can add, edit, and delete points, and the application displays them in a user-friendly table. The nearest and farthest points are calculated in real-time as users edit point coordinates.
 
-### Compiles and hot-reloads for development
-```
+## Features
+- Display a list of points in a table sorted by name.
+- Add new points with name and coordinates (X, Y).
+- Edit existing points.
+- Delete points from the list.
+- Real-time calculation of nearest and farthest points based on current coordinates.
+- User-friendly interface with modern design.
+
+## Tech Stack
+- **Frontend**: Vue.js
+- **Backend**: Node.js with Express
+- **Database**: PostgreSQL
+- **Styling**: Custom CSS
+
+## Installation
+
+### Prerequisites
+- Node.js (v18.x or later)
+- npm (v10.x or later)
+- PostgreSQL
+
+### Setting Up the Database
+1. Ensure PostgreSQL is running on your machine.
+2. Create a database for the application.
+3. Create the `point` table by running the following SQL command:
+   ```sql
+   CREATE TABLE point (
+       id SERIAL PRIMARY KEY,
+       name TEXT NOT NULL,
+       x INTEGER NOT NULL,
+       y INTEGER NOT NULL
+   );
+
+### Clone the Repository
+git clone https://github.com/yourusername/point-tracker.git
+cd point-tracker-app
+
+### Install Dependencies
+For the BackEnd:
+cd point-tracker-backend
+
+### Configuration
+Update the database connection string in the backend configuration file to match your PostgreSQL setup.
+
+### Running the Application
+Start the backend server:
+bash
+cd point-tracker-backend
+npm start
+Start the frontend development server:
+bash
+cd point-tracker-frontend
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The application will be running at http://localhost:3000/.
