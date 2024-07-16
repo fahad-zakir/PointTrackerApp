@@ -1,5 +1,6 @@
 <template>
     <div>
+        <router-link to="/" class="home-button">Home</router-link>
         <h2>Edit Point</h2>
         <form @submit.prevent="savePoint">
             <div>
@@ -14,9 +15,11 @@
                 <label>Y:</label>
                 <input type="number" v-model="point.y" required />
             </div>
-            <button type="submit" >Save</button>
-            <button type="button" @click="resetForm">Reset</button>
-            <button type="button" @click="deletePoint">Delete</button>
+            <div class="button-group">
+                <button type="submit">Save</button>
+                <button type="button" @click="resetForm">Reset</button>
+                <button type="button" @click="deletePoint">Delete</button>
+            </div>
         </form>
         <p v-if="nearestPoints.length">Nearest points at distance {{ nearestDistance }}:</p>
         <ul class="custom-list">
@@ -115,6 +118,22 @@ export default {
 </script>
 
 <style scoped>
+.home-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 4px 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    /* Space between the button and the title */
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -130,7 +149,14 @@ input {
     margin-bottom: 10px;
 }
 
-button {
+.button-group {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
 }
 </style>

@@ -13,7 +13,6 @@
 }
 
 h1 {
-  padding: 30px;
   color: #2076c7;
 }
 

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <router-link to="/" class="home-button">Home</router-link>
         <h2>New Point</h2>
         <form @submit.prevent="createPoint">
             <div>
@@ -48,6 +49,22 @@ export default {
 </script>
 
 <style scoped>
+.home-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 4px 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    /* Space between the button and the title */
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+
 form {
     display: flex;
     flex-direction: column;
