@@ -1,5 +1,4 @@
 <template>
-  <h1>Point Tracker App</h1>
   <router-view/>
 </template>
 
@@ -11,9 +10,4 @@
   text-align: center;
   color: #2c3e50;
 }
-
-h1 {
-  color: #2076c7;
-}
-
 </style>

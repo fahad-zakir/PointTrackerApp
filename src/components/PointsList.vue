@@ -1,5 +1,6 @@
 <template>
     <div>
+          <h1>Point Tracker App</h1>
         <button style="margin-bottom:30px;" @click="goToNewPoint">New Point</button>
         <table class="rounded-table">
             <thead>
