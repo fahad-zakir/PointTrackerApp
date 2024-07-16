@@ -37,8 +37,8 @@ Point Tracker App is a simple web application that allows users to manage a set 
    );
 
 ### Clone the Repository
-git clone https://github.com/yourusername/PointTrackerApp.git
-cd point-tracker-app
+- git clone https://github.com/yourusername/PointTrackerApp.git
+- cd point-tracker-app
 
 ### Install Dependencies
 - For the FrontEnd:
