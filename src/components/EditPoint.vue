@@ -21,11 +21,11 @@
                 <button type="button" @click="deletePoint">Delete</button>
             </div>
         </form>
-        <p v-if="nearestPoints.length">Nearest points at distance {{ nearestDistance }}:</p>
+        <p v-if="nearestPoints.length">Nearest point at distance {{ nearestDistance }}:</p>
         <ul class="custom-list">
             <li v-for="p in nearestPoints" :key="p.id">{{ p.name }} ({{ p.x }}, {{ p.y }})</li>
         </ul>
-        <p v-if="farthestPoints.length">Farthest points at distance {{ farthestDistance }}:</p>
+        <p v-if="farthestPoints.length">Farthest point at distance {{ farthestDistance }}:</p>
         <ul class="custom-list">
             <li v-for="p in farthestPoints" :key="p.id">{{ p.name }} ({{ p.x }}, {{ p.y }})</li>
         </ul>
@@ -95,14 +95,16 @@ export default {
                         distance: Math.sqrt((p.x - this.point.x) ** 2 + (p.y - this.point.y) ** 2),
                     }));
 
-                    const nearestDistance = Math.min(...distances.map(d => d.distance));
-                    const farthestDistance = Math.max(...distances.map(d => d.distance));
+                    distances.sort((a, b) => a.distance - b.distance);
 
-                    this.nearestPoints = distances.filter(d => d.distance === nearestDistance);
-                    this.nearestDistance = nearestDistance.toFixed(1);
+                    const nearestUnique = distances.find(d => d.distance !== distances[0].distance) || distances[0];
+                    const farthestUnique = distances.find(d => d.distance !== distances[distances.length - 1].distance) || distances[distances.length - 1];
 
-                    this.farthestPoints = distances.filter(d => d.distance === farthestDistance);
-                    this.farthestDistance = farthestDistance.toFixed(1);
+                    this.nearestPoints = [nearestUnique];
+                    this.nearestDistance = nearestUnique.distance.toFixed(1);
+
+                    this.farthestPoints = [farthestUnique];
+                    this.farthestDistance = farthestUnique.distance.toFixed(1);
                 })
                 .catch(error => {
                     console.error(error);
