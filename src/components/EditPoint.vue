@@ -89,7 +89,7 @@ export default {
         updateDistances() {
             axios.get('http://localhost:3000/points')
                 .then(response => {
-                    const points = response.data;
+                    const points = response.data.filter(p => p.id !== this.point.id);
                     const distances = points.map(p => ({
                         ...p,
                         distance: Math.sqrt((p.x - this.point.x) ** 2 + (p.y - this.point.y) ** 2),
