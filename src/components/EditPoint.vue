@@ -4,7 +4,7 @@
         <form @submit.prevent="savePoint">
             <div>
                 <label>Name:</label>
-                <input v-model="point.name" required />
+                <input class="name-input" v-model="point.name" required />
             </div>
             <div>
                 <label>X:</label>
@@ -14,16 +14,16 @@
                 <label>Y:</label>
                 <input type="number" v-model="point.y" required />
             </div>
-            <button type="submit" :disabled="!isFormValid">Save</button>
+            <button type="submit" >Save</button>
             <button type="button" @click="resetForm">Reset</button>
             <button type="button" @click="deletePoint">Delete</button>
         </form>
         <p v-if="nearestPoints.length">Nearest points at distance {{ nearestDistance }}:</p>
-        <ul>
+        <ul class="custom-list">
             <li v-for="p in nearestPoints" :key="p.id">{{ p.name }} ({{ p.x }}, {{ p.y }})</li>
         </ul>
         <p v-if="farthestPoints.length">Farthest points at distance {{ farthestDistance }}:</p>
-        <ul>
+        <ul class="custom-list">
             <li v-for="p in farthestPoints" :key="p.id">{{ p.name }} ({{ p.x }}, {{ p.y }})</li>
         </ul>
     </div>

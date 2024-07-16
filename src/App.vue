@@ -1,8 +1,5 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <h1>Point Tracker App</h1>
   <router-view/>
 </template>
 
@@ -15,8 +12,9 @@
   color: #2c3e50;
 }
 
-nav {
+h1 {
   padding: 30px;
+  color: #2076c7;
 }
 
 nav a {

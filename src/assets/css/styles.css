@@ -6,6 +6,10 @@ body {
     padding: 20px;
 }
 
+h2 {
+    color: lime;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -56,11 +60,18 @@ button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-
+.name-input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
 input[type="text"],
 input[type="number"],
 textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -72,4 +83,50 @@ input:focus,
 textarea:focus {
     border-color: #007BFF;
     outline: none;
+}
+
+.rounded-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rounded-table th,
+.rounded-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.rounded-table th:first-child,
+.rounded-table td:first-child {
+    border-left: none;
+}
+
+.rounded-table th:last-child,
+.rounded-table td:last-child {
+    border-right: none;
+}
+
+.rounded-table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.rounded-table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.rounded-table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.rounded-table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.custom-list {
+    list-style-type: none;
 }

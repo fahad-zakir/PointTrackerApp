@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="goToNewPoint">New Point</button>
-        <table>
+        <table class="rounded-table">
             <thead>
                 <tr>
                     <th>Name</th>

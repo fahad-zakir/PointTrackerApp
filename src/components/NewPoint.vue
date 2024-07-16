@@ -4,7 +4,7 @@
         <form @submit.prevent="createPoint">
             <div>
                 <label>Name:</label>
-                <input v-model="point.name" required />
+                <input class="name-input" v-model="point.name" required />
             </div>
             <div>
                 <label>X:</label>
