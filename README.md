@@ -1,11 +1,11 @@
 # Point Tracker
 
 ## Overview
-Point Tracker is a simple web application that allows users to manage a set of named points on a 2D plane. Users can add, edit, and delete points, and the application displays them in a user-friendly table. The nearest and farthest points are calculated in real-time as users edit point coordinates.
+Point Tracker App is a simple web application that allows users to manage a set of named points on a 2D plane. Users can add, edit, and delete points; the application displays them in a user-friendly table. The nearest and farthest points are calculated in real time as users edit point coordinates.
 
 ## Features
 - Display a list of points in a table sorted by name.
-- Add new points with name and coordinates (X, Y).
+- Add new points with names and coordinates (X, Y).
 - Edit existing points.
 - Delete points from the list.
 - Real-time calculation of nearest and farthest points based on current coordinates.
@@ -37,7 +37,7 @@ Point Tracker is a simple web application that allows users to manage a set of n
    );
 
 ### Clone the Repository
-git clone https://github.com/yourusername/point-tracker.git
+git clone https://github.com/yourusername/PointTrackerApp.git
 cd point-tracker-app
 
 ### Install Dependencies
@@ -57,4 +57,4 @@ node index.js
 Start the frontend development server:
 cd point-tracker-frontend
 npm run serve
-The application will be running at http://localhost:3000/.
+The application will be running at http://localhost:8080/.
