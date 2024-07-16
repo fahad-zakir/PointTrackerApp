@@ -11,9 +11,9 @@
             </thead>
             <tbody>
                 <tr v-for="point in points" :key="point.id" @click="editPoint(point.id)">
-                    <td>{{ point.name }}</td>
-                    <td>{{ point.x }}</td>
-                    <td>{{ point.y }}</td>
+                    <td style="width: 20%">{{ point.name }}</td>
+                    <td style="width: 10%">{{ point.x }}</td>
+                    <td style="width: 10%">{{ point.y }}</td>
                 </tr>
             </tbody>
         </table>
@@ -54,10 +54,13 @@ export default {
 
 <style scoped>
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    overflow: hidden;
 }
-
 th,
 td {
     border: 1px solid black;

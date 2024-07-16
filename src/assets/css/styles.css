@@ -88,7 +88,6 @@ textarea:focus {
 .rounded-table {
     border-collapse: separate;
     border-spacing: 0;
-    width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
