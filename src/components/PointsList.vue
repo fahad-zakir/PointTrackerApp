@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="goToNewPoint">New Point</button>
+        <button style="margin-bottom:30px;" @click="goToNewPoint">New Point</button>
         <table class="rounded-table">
             <thead>
                 <tr>
